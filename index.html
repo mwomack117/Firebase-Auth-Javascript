@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Firebase Auth Javascript</title>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
 </head>
+
 <body>
     <div class="header">
-        <div><img src="firebase-image.png" style="margin-top: 1vh; width: 130px;"></div>
-        <div><img src="JS-logo.jpeg" style="margin-top: 2vh; width: 80px;"></div>
+        <div><img src="firebase-image.png" style="margin-top: 1vh; width: 150px;"></div>
+        <div><img src="JS-logo.jpeg" style="margin-top: 2vh; width: 100px;"></div>
     </div>
 
     <!-- Authentication -->
     <div class="dashed-container">
         <div class="cut-sentence">
             <i class="far fa-hand-scissors fa-2x"></i> cut and use in your program
-            <span  class="orange-words">Authentication</span>
+            <span class="orange-words">Authentication</span>
             <h2 class="form-titles-1">Sign Up Form</h2>
             <form id="sign-up-form">
                 <input type="email" class="txt-email" placeholder="email" required>
                 <input type="password" class="txt-password" placeholder="password" required>
-                <button type="submit" id="btn-sign-up"name="button">Sign Up</button>
+                <button type="submit" id="btn-sign-up" name="button">Sign Up</button>
             </form>
 
             <h2 class="form-titles-2">Sign In Form</h2>
             <form id="login-form">
                 <input type="email" class="txt-email-login" placeholder="email" required>
                 <input type="password" class="txt-password-login" placeholder="password" required>
-                <button type="submit" id="btn-login"name="button">Sign In</button>
+                <button type="submit" id="btn-login" name="button">Sign In</button>
             </form>
 
             <button type="button" id="btn-logout">Log Out</button>
@@ -35,23 +38,60 @@
     </div>
 
     <!-- Status -->
+    <p id="errors"></p>
+
+    <!-- Status -->
     <p id="status"></p>
     <!-- Authorization -->
     <div class="dashed-container">
-            <div class="cut-sentence">
-                <i class="far fa-hand-scissors fa-2x"></i> cut and use in your program
-                <span  class="orange-words">Authorization</span>
-            </div>
+        <div class="cut-sentence">
+            <i class="far fa-hand-scissors fa-2x"></i> cut and use in your program
+            <span class="orange-words">Authorization</span>
         </div>
-    
+        <h2>To Do List</h2>
+        <form id="add-item-form">
+            <input type="text" id="item" placeholder="to do item">
+            <button type="submit">Add item</button>
+        </form>
+        <div id="to-do-list-items">
+
+        </div>
+    </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
+
 </html>
 
 <style media="screen">
     body {
         font-family: 'Open Sans', sans-serif;
-        margin: 3vh 20px;
+        margin: 3vh 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    input {
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    /* a:hover {
+        cursor: pointer;
+    } */
+    #status {
+        color: #ccc;
+        font-size: 2em;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 8vh;
     }
 
     .header {
@@ -81,5 +121,4 @@
     .status-red {
         color: red;
     }
-
 </style>
