@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Firebase Auth Javascript</title>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">
+        <div><img src="firebase-image.png" style="margin-top: 1vh; width: 130px;"></div>
+        <div><img src="JS-logo.jpeg" style="margin-top: 2vh; width: 80px;"></div>
+    </div>
+
+    <!-- Authentication -->
+    <div class="dashed-container">
+        <div class="cut-sentence">
+            <i class="far fa-hand-scissors fa-2x"></i> cut and use in your program
+            <span  class="orange-words">Authentication</span>
+            <h2 class="form-titles-1">Sign Up Form</h2>
+            <form id="sign-up-form">
+                <input type="email" class="txt-email" placeholder="email" required>
+                <input type="password" class="txt-password" placeholder="password" required>
+                <button type="submit" id="btn-sign-up"name="button">Sign Up</button>
+            </form>
+
+            <h2 class="form-titles-2">Sign In Form</h2>
+            <form id="login-form">
+                <input type="email" class="txt-email-login" placeholder="email" required>
+                <input type="password" class="txt-password-login" placeholder="password" required>
+                <button type="submit" id="btn-login"name="button">Sign In</button>
+            </form>
+
+            <button type="button" id="btn-logout">Log Out</button>
+        </div>
+    </div>
+
+    <!-- Status -->
+    <p id="status"></p>
+    <!-- Authorization -->
+    <div class="dashed-container">
+            <div class="cut-sentence">
+                <i class="far fa-hand-scissors fa-2x"></i> cut and use in your program
+                <span  class="orange-words">Authorization</span>
+            </div>
+        </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+<style media="screen">
+    body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 3vh 20px;
+    }
+
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+        grid-column-gap: 40px;
+        margin: auto;
+    }
+
+    .dashed-container {
+        margin: 30px;
+    }
+
+    .orange-words {
+        color: orange;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .status-green {
+        color: green;
+    }
+
+    .status-red {
+        color: red;
+    }
+
+</style>
